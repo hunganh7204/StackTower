@@ -33,7 +33,11 @@ public class BlockSpawner : MonoBehaviour
         go.name = "Block_0";
         go.transform.localScale = new Vector3(3f, 0.5f, 3f);
         Renderer r = go.GetComponent<Renderer>();
-        if (r != null) r.material.color = Color.HSVToRGB(0.5f, 0.7f, 0.9f);
+        if (r != null)
+        {
+            float hue = (blockIndex * 0.05f) % 1f;
+            r.material.color = Color.HSVToRGB(hue, 0.6f, 0.95f);
+        }
         if (go.GetComponent<Rigidbody>() != null) Destroy(go.GetComponent<Rigidbody>());
         GameManager.instance.currentBlock = go.transform;
     }
@@ -50,7 +54,11 @@ public class BlockSpawner : MonoBehaviour
         go.name = "Block_" + blockIndex;
         go.transform.localScale = prev.localScale;
         Renderer r = go.GetComponent<Renderer>();
-        if (r != null) r.material.color = Color.HSVToRGB(Random.value, 0.7f, 0.9f);
+        if (r != null)
+        {
+            float hue = (blockIndex * 0.05f) % 1f;
+            r.material.color = Color.HSVToRGB(hue, 0.6f, 0.95f);
+        }
         if (go.GetComponent<Rigidbody>() != null) Destroy(go.GetComponent<Rigidbody>());
         BlockController bc = go.GetComponent<BlockController>();
         if (bc != null) bc.previousBlock = prev;

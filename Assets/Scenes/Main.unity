@@ -150,8 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 988911635579695372, guid: 543ae5a73a1782446b85e190097fe51b, type: 3}
   blockSpawner: {fileID: 768370668}
-  startY: 1
-  startPos: {x: 0, y: 1, z: 0}
+  groundObject: {fileID: 1087161802}
   scoreText: {fileID: 0}
   gameOverPanel: {fileID: 0}
   currentBlock: {fileID: 0}
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 988911635579695372, guid: 543ae5a73a1782446b85e190097fe51b, type: 3}
   spawnYIncrement: 0.6
-  spawnStartY: 2
+  initialSpawnY: 1.5
 --- !u!4 &768370669
 Transform:
   m_ObjectHideFlags: 0

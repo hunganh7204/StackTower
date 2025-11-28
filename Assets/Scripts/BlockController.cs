@@ -116,6 +116,6 @@ public class BlockController : MonoBehaviour
         Rigidbody rb = piece.AddComponent<Rigidbody>();
         rb.mass = 1f;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-        Destroy(piece, 4f);
+        Destroy(piece, 2f);
     }
 }
